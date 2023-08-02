@@ -1,5 +1,4 @@
-import { useState, } from "react";
-
+import { useState } from "react";
 
 import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.component";
@@ -24,7 +23,6 @@ const SignInForm = () => {
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   };
-
 
   const signInWithGoogle = async () => {
     await signInWithGooglePopup();
@@ -61,8 +59,8 @@ const SignInForm = () => {
 
   return (
     <div className="sign-up-container">
-      <h2>Already have an account?</h2>
-      <span>Sign in with your email and password</span>
+      <h2>Já tem uma conta?</h2>
+      <span>Entre com seu e-mail e senha</span>
       <form onSubmit={handleSubmit}>
         <FormInput
           label="Email"
@@ -82,9 +80,9 @@ const SignInForm = () => {
           value={password}
         />
         <div className="buttons-container">
-          <Button type="submit">Sign In</Button>
+          <Button type="submit">Login</Button>
           <Button type="button" buttonType="google" onClick={signInWithGoogle}>
-            Google sign in
+            Login do Google{" "}
           </Button>
         </div>
       </form>
